@@ -32,7 +32,7 @@ public class array {
         score[3] = new int[]{40,40};
         score[4] = new int[]{50,50,50};
         System.out.println(score.length);
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < score.length; i++) {
             for (int j = 0; j < score[i].length; j++) {
                 System.out.print(score[i][j] + " ");
             }

@@ -38,5 +38,9 @@ public class array {
             }
             System.out.println("");
         }
+        int[] array = new int[] {3,4,5,6,7};
+        for(int k : array) { // for - each 구문
+            System.out.println(k);
+        }
     }
 }

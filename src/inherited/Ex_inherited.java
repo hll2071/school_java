@@ -1,5 +1,5 @@
 package inherited;
-class Phone {
+abstract class Phone {
     private String model;
     private String bluetooth;
     private String unyoung;
@@ -23,15 +23,9 @@ class Phone {
         this.unyoung = unyoung;
     }
 
-    public void call() {
-        System.out.println("전화가 울려용");
-    }
-    public void ai() {
-        System.out.println("Ai가 있어용");
-    }
-    public void make() {
-        System.out.println("어디서 만들었을까용");
-    }
+    public abstract void call();
+    public abstract void ai();
+    public abstract void make();
     public Phone(String model, String bluetooth, String unyoung) {
         this.model = model;
         this.bluetooth = bluetooth;
@@ -76,16 +70,11 @@ class Iphone extends Phone {
 }
 public class Ex_inherited {
     public static void main(String[] args) {
-        Phone pho = new Phone();
+
         Galaxy gal = new Galaxy();
         Iphone iph = new Iphone();
 
         Galaxy axy = new Galaxy("갤럭시 A7", "버즈 프로", "안드로이드", 2);
-
-        pho.setModel("꼇누스 블랙 폰");
-        pho.setBluetooth("그의 파란 이빨");
-        pho.setUnyoung("김현우식 운영");
-        System.out.println(pho.getModel());
 
         gal.setModel("갤럭시 s22+");
         gal.setBluetooth("버즈");

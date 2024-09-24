@@ -71,6 +71,23 @@ class Iphone extends Phone {
 public class Ex_inherited {
     public static void main(String[] args) {
 
+        Phone pho = new Phone() {
+            @Override
+            public void ai() {
+                System.out.println("꼇누아이");
+            }
+
+            @Override
+            public void call() {
+                System.out.println("아아안이이이");
+            }
+
+            @Override
+            public void make() {
+                System.out.println("공장에서");
+            }
+        };
+
         Galaxy gal = new Galaxy();
         Iphone iph = new Iphone();
 
@@ -86,7 +103,7 @@ public class Ex_inherited {
         iph.setUnyoung("OS");
         System.out.println(iph.getModel());
 
-        Phone[] phones = new Phone[] {new Galaxy(), new Iphone()};
+        Phone[] phones = new Phone[] {new Galaxy(), new Iphone(), pho};
         for(Phone phone : phones) {
             phone.ai();
             phone.call();
